@@ -29,7 +29,7 @@ To achieve the objective, we need to modify the trajectory. Thus, we created a m
 For the trajectory generation, we used a classical trapezoidal velocity profile to ensure smooth movement.
 
 We first starts with the move along x axis : 
-We used as fixed parameters the maximum cartesian velocity $v_{x,max}\neq 0$ and the acceleration $a_{x}\neq 0$. 
+We used as fixed parameters the maximum cartesian velocity $v_{x,max}\neq 0$ (m/s) and the acceleration $a_{x}\neq 0$ (m/s²). 
 
 $a_{x}$ value can vary according to the phase : its value is $a_{x}$ during acceleration phase, 0 during speed cruise phase and $-a_{x}$ during deceleration phase.
 The time required to reach the cruise velocity is $t1 = \frac{v_{x,max}}{a_{x}}$. It is same for the decelration duration.
