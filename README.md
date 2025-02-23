@@ -51,7 +51,7 @@ We replicate this method for the movement along z axis, taking into account the 
 
 ### Results
 
-With $v_{x,max}$ = 0.05m/s, $a_{x} = 0.1m/s²$, $v_{z,max}$ = -0.05m/s and $a_{z} = -0.1m/s²$ , the robot moves smoothly and achieve follows the desired trajectory. An overview of the tajectory is displayed on the following figure (robot is at final position).
+With $v_{x,max}$ = 0.05m/s, $a_{x} = 0.1m/s²$, $v_{z,max}$ = -0.05m/s and $a_{z} = -0.1m/s²$ , the robot moves smoothly and follows the desired trajectory. An overview of the tajectory is displayed on the following figure (robot at final position).
 
 ![image](part1.png)
 
@@ -78,7 +78,7 @@ We do it for two configurations.
 
 #### Results
 
-The results are displayed in two windows MeshcatVisualizer. We used the default tiem horizon 200ms (if we increase it, the polytope logically expands) :
+The results are displayed in two windows MeshcatVisualizer. We used the default time horizon 200ms (if we increase it, the polytope logically expands) :
 
 ![image](rws_1.png)
 
