@@ -32,7 +32,7 @@ We first starts with the move along x axis :
 We used as fixed parameters the maximum cartesian velocity $v_{x,max}\neq 0$ (m/s) and the acceleration $a_{x}\neq 0$ (m/s²). 
 
 $a_{x}$ value can vary according to the phase : its value is $a_{x}$ during acceleration phase, 0 during speed cruise phase and $-a_{x}$ during deceleration phase.
-The time required to reach the cruise velocity is $t1 = \frac{v_{x,max}}{a_{x}}$. It is same for the decelration duration.
+The time required to reach the cruise velocity is $t1 = \frac{v_{x,max}}{a_{x}}$. It is the same for the deceleration duration.
 We must chose $v_{x,max}$ and $a_{x}$ st $\frac{v_{x,max}^2}{a_{x}} \leq \Delta_{x}$, with $\Delta_{x}$ the desired displacement along x axis.
 Then, we must compute the duration of the cruise velocity phase (t_steady). We want the integral of the cartesian velocity to be equal to $\Delta_{x}$.
 Integrating our trapezoidal velocity profile we get: 
