@@ -30,7 +30,8 @@ For the trajectory generation, we used a classical trapezoidal velocity profile 
 
 We first starts with the move along x axis : 
 We used as fixed parameters the maximum cartesian velocity $v_{x,max}\neq 0$ and the acceleration $a_{x}\neq 0$. 
-$a_{x}$ value can vary according to the phase : its value is $a_{x}$ during acceleration phase, 0 during speed cruise phase and -$a_{x}$ during deceleration phase.
+
+$a_{x}$ value can vary according to the phase : its value is $a_{x}$ during acceleration phase, 0 during speed cruise phase and $-a_{x}$ during deceleration phase.
 The time required to reach the cruise velocity is $t1 = \frac{v_{x,max}}{a_{x}}$. It is same for the decelration duration.
 We must chose $v_{x,max}$ and $a_{x}$ st $\frac{v_{x,max}^2}{a_{x}} \leq \Delta_{x}$, with $\Delta_{x}$ the desired displacement along x axis.
 Then, we must compute the duration of the cruise velocity phase (t_steady). We want the integral of the cartesian velocity to be equal to $\Delta_{x}$.
@@ -39,9 +40,9 @@ So we have $t_{steady} = \frac{\Delta_{x}}{v_{x,max}} - \frac{v_{x,max}}{a_{x}}$
 
 Finally, we use the following equations to compute the velocity and the position of the trajectory :
 
-$v_{x}(t_{k+1}) = v_{x}(t_{k}) + a_{x}*Delta_{T}$ where $Delta_{T}$=1ms here.
+$v_{x}(t_{k+1}) = v_{x}(t_{k}) + a_{x}*\Delta_{T}$ where $\Delta_{T}$=1ms here.
 
-$x(t_{k+1}) = x(t_{k}) + v_{x}*Delta_{T}$ where $Delta_{T}$=1ms here.
+$x(t_{k+1}) = x(t_{k}) + v_{x}*\Delta_{T}$ where $\Delta_{T}$=1ms here.
 
 We replicate this method for the movement along z axis, taking into account the new x pose of the robot.
 
