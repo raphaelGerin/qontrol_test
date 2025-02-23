@@ -48,7 +48,8 @@ We replicate this method for the movement along z axis, taking into account the 
 
 ### Results
 
-With $v_{x,max}$ = 0.05m/s, $a_{x} = 0.1m/s²$, $v_{z,max}$ = -0.05m/s and $a_{z} = -0.1m/s²$ , the robot moves smoothly and achieve follows the desired trajectory.
+With $v_{x,max}$ = 0.05m/s, $a_{x} = 0.1m/s²$, $v_{z,max}$ = -0.05m/s and $a_{z} = -0.1m/s²$ , the robot moves smoothly and achieve follows the desired trajectory. An overview is displayed on the following figure.
+![image](part1.png)
 
 
 ## 2-Pycapacity
