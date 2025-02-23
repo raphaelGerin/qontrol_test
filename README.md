@@ -56,3 +56,71 @@ With $v_{x,max}$ = 0.05m/s, $a_{x} = 0.1m/s²$, $v_{z,max}$ = -0.05m/s and $a_{z
 
 
 ## 2-Pycapacity
+
+### Non-convexe reachable workspace
+
+#### Objective
+
+The objective of this part is to display the non-convexe reachable workspace of a UR robot in two different configurations.
+
+#### Method
+
+First, we looked at the pycapacity documentation and more espacially a [tutorial](https://auctus-team.github.io/pycapacity/examples/reachable_workspace.html) that explains how to display the non-convexe reachable workspace of a Panda robot.
+
+Thus, we just modified this code in "test_reachable_ws.py" to load the model of a UR10 that exists in the example_robot_data module.
+
+We checked that the option "convex_hull" was set to False to obtain the non-convexe reachable workspace. We kept the other parameters as it. 
+They allow us to calculate the faces of the polytope and to add samples to better the approximated polytope.
+Increasing the number of sample better the accuracy but it increases the computation time. 
+
+We do it for two configurations.
+
+#### Results
+
+The results are displayed in two windows MeshcatVisualizer. We used the default tiem horizon 200ms (if we increase it, the polytope logically expands) :
+
+![image](rsw_1.png)
+
+In the first configuration, the robot is folded, it has more possibilities by unfolding forward than by continuing to fold backwards
+![image](rsw_2.png)
+
+In the second configuration, the robot is almost reaching its maximal extension. 
+Consequently, we see the reachable workspace doesn't extend much further than the base of the robot.
+However, by rotating around the joint 0 or joint 1, the robot can travel a long distance in a short amount of time toward sides or up/down by describing a circle.
+
+From those two examples, we can see that reachable workspace of the robot can vary a lot according to its pose.
+
+### Force capacity polytope
+
+#### Objective
+
+The objective of this part is to display the force capacity polytope of a Panda robot in two different configurations.
+
+#### Method
+
+First, we looked at the pycapacity documentation and more espacially an [example](https://auctus-team.gitlabpages.inria.fr/people/antunskuric/pycapacity/examples/pinocchio.html) that explains how to display the force capacity polytope of Panda robot.
+
+Thus, we  modified this code in "test_force_capacity.py" to load the model of a Panda that exists in the example_robot_data module.
+However, we need the position part of the Jacobian matrix to compute the force capacity polytope. 
+We used pinocchio "computeJointJacobians(robot.model,data, q)" and "getFrameJacobian(...)" to compute all the Jacobian matrices and select the desired one (ie the matrix linked to the end effector frame).
+
+The pycapacity function "force_polytope(J,t_max,t_min)" computes the polytope from the position Jacobian, the maximal and minimal torques we get from the robot model. 
+
+Note that we must add a translation to the polytope using Meshcat to display it at the correct place with respect to robot end effector.
+
+The polytope being quite large, we used a scale factor (1/10) to reduce its size for vizualisation.
+
+We do it for two configurations.
+
+#### Results
+
+As for the reachable workspace, we compare the results for an unfolded configuration and a folded one.
+
+![image](fcp_1.png)
+
+![image](fcp_2.png)
+
+The results shows the same results : the robot cannot apply a lot of force along a certain direction when it is in an unfolded configuration.
+In this case, the polytope is almost planar.
+As soon as we fold it, the polytope becomes a little bit more spherical.
+In this case, several joints can get involved in the force generation.
