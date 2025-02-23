@@ -79,10 +79,10 @@ We do it for two configurations.
 
 The results are displayed in two windows MeshcatVisualizer. We used the default tiem horizon 200ms (if we increase it, the polytope logically expands) :
 
-![image](rsw_1.png)
+![image](rws_1.png)
 
 In the first configuration, the robot is folded, it has more possibilities by unfolding forward than by continuing to fold backwards
-![image](rsw_2.png)
+![image](rws_2.png)
 
 In the second configuration, the robot is almost reaching its maximal extension. 
 Consequently, we see the reachable workspace doesn't extend much further than the base of the robot.
