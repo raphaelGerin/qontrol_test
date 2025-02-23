@@ -58,6 +58,8 @@ With $v_{x,max}$ = 0.05m/s, $a_{x} = 0.1m/s²$, $v_{z,max}$ = -0.05m/s and $a_{z
 
 ## 2-Pycapacity
 
+The second part of the test is about basic handling and understanding of the pycapacity tool.
+
 ### Non-convexe reachable workspace
 
 #### Objective
