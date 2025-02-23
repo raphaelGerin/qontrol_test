@@ -82,7 +82,8 @@ The results are displayed in two windows MeshcatVisualizer. We used the default 
 
 ![image](rws_1.png)
 
-In the first configuration, the robot is folded, it has more possibilities by unfolding forward than by continuing to fold backwards
+In the first configuration, the robot is folded, it has more possibilities by unfolding forward than by continuing to fold backwards.
+
 ![image](rws_2.png)
 
 In the second configuration, the robot is almost reaching its maximal extension. 
