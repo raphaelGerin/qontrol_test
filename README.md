@@ -16,7 +16,7 @@ The installation went smoothly, however we could only launch the examples with t
 ### Choice of the example
 
 A set of four examples are explained in [qontrol documentation](https://auctus-team.gitlabpages.inria.fr/components/control/qontrol/md_doc_b-examples_intro.html): torque control, velocity control, custom task and custom constraint.
-For the torque control and the velocity exmaples,the robot main tasks consists in following a simple trajectory defined in Cartesian space.
+For the torque control and the velocity examples,the robot main tasks consists in following a simple trajectory defined in Cartesian space.
 Thus, we arbitrarily choose to use the velocity control (velocityQontrol.cpp). 
 
 ### Working principle
