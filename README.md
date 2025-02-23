@@ -35,8 +35,11 @@ $a_{x}$ value can vary according to the phase : its value is $a_{x}$ during acce
 The time required to reach the cruise velocity is $t1 = \frac{v_{x,max}}{a_{x}}$. It is same for the decelration duration.
 We must chose $v_{x,max}$ and $a_{x}$ st $\frac{v_{x,max}^2}{a_{x}} \leq \Delta_{x}$, with $\Delta_{x}$ the desired displacement along x axis.
 Then, we must compute the duration of the cruise velocity phase (t_steady). We want the integral of the cartesian velocity to be equal to $\Delta_{x}$.
-Integrating our trapezoidal velocity profile we get: $\frac{v_{x,max}^2}{a_{x}} + t_{steady}v_{x,max} = \Delta_{x}$.
-So we have $t_{steady} = \frac{\Delta_{x}}{v_{x,max}} - \frac{v_{x,max}}{a_{x}}$.
+Integrating our trapezoidal velocity profile we get: 
+
+$\frac{v_{x,max}^2}{a_{x}} + t_{steady}v_{x,max} = \Delta_{x}$.
+
+It gives $t_{steady} = \frac{\Delta_{x}}{v_{x,max}} - \frac{v_{x,max}}{a_{x}}$.
 
 Finally, we use the following equations to compute the velocity and the position of the trajectory :
 
@@ -48,7 +51,7 @@ We replicate this method for the movement along z axis, taking into account the 
 
 ### Results
 
-With $v_{x,max}$ = 0.05m/s, $a_{x} = 0.1m/s²$, $v_{z,max}$ = -0.05m/s and $a_{z} = -0.1m/s²$ , the robot moves smoothly and achieve follows the desired trajectory. An overview is displayed on the following figure.
+With $v_{x,max}$ = 0.05m/s, $a_{x} = 0.1m/s²$, $v_{z,max}$ = -0.05m/s and $a_{z} = -0.1m/s²$ , the robot moves smoothly and achieve follows the desired trajectory. An overview of the tajectory is displayed on the following figure (robot is at final position).
 ![image](part1.png)
 
 
