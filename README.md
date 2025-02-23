@@ -40,9 +40,9 @@ So we have $t_{steady} = \frac{\Delta_{x}}{v_{x,max}} - \frac{v_{x,max}}{a_{x}}$
 
 Finally, we use the following equations to compute the velocity and the position of the trajectory :
 
-$v_{x}(t_{k+1}) = v_{x}(t_{k}) + a_{x}*\Delta_{T}$ where $\Delta_{T}$=1ms here.
+$v_{x}(t_{k+1}) = v_{x}(t_{k}) + a_{x}(t_{k})*\Delta_{T}$ where $\Delta_{T}$=1ms here.
 
-$x(t_{k+1}) = x(t_{k}) + v_{x}*\Delta_{T}$ where $\Delta_{T}$=1ms here.
+$x(t_{k+1}) = x(t_{k}) + v_{x}(t_{k})*\Delta_{T}$ where $\Delta_{T}$=1ms here.
 
 We replicate this method for the movement along z axis, taking into account the new x pose of the robot.
 
